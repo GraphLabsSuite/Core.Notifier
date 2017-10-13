@@ -9,7 +9,10 @@ export default class Sender {
   async send(messageObject: IPrepared): Promise<IResult> {
     return fetch(`${this.host}/notificate`, {
       method: 'POST',
-      body: messageObject
+      headers:  {
+        "Content-type": "application/json; charset=UTF-8"
+      },
+      body: JSON.stringify(messageObject),
     }).then((response: Response) => {
       return {
         status: response.ok,

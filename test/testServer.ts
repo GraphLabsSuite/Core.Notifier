@@ -21,9 +21,9 @@ export default class TestServer {
       console.log("Server listened on: " + this.port)
     });
 
-    this.app.post('/notificate', (result: Request, response: Response): void=> {
-      console.log(result.body);
-      response.status(200).send(JSON.stringify({
+    this.app.post('/notificate', (req: Request, res: Response): void=> {
+      console.log(req.body);
+      res.status(200).send(JSON.stringify({
         message: "Everything is OK"
       }));
     });
