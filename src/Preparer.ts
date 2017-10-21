@@ -1,4 +1,4 @@
-import {IPrepared} from "./IPrepared";
+import {IPrepared} from "./types";
 export default class Preparer {
 
   prepareMessage(message: string): IPrepared {

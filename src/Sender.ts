@@ -1,5 +1,4 @@
-import {IPrepared} from "./IPrepared";
-import {IResult} from "./IResult";
+import {IResult, IPrepared} from "./types";
 import axios, {AxiosResponse} from "axios";
 
 export default class Sender {
