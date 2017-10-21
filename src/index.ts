@@ -7,3 +7,4 @@ export * from "./IResult";
 export * from "./IPreparedError";
 export * from "./IPreparedMessage";
 export * from "./types";
+export * from "./reducer";
