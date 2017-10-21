@@ -7,4 +7,5 @@ export * from "./IResult";
 export * from "./IPreparedError";
 export * from "./IPreparedMessage";
 export * from "./types";
-export * from "./reducer";
+export {default as reducer} from "./reducer";
+export {default as createReducer} from "./createReducer";
