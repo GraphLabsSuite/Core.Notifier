@@ -1,7 +1,6 @@
 import Preparer from "./Preparer";
 import Sender from "./Sender";
 import {IResult} from "./types";
-import {AxiosPromise} from "axios";
 
 export default class Notifier {
 

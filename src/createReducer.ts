@@ -1,6 +1,6 @@
 import {
   ADD_ACTION
-} from './actionTypes';
+} from './actions';
 import {Action, AssociativeArray, INotifierStore} from "./types";
 
 const initialState: INotifierStore = {
