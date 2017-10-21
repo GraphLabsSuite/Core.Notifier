@@ -1,6 +1,6 @@
 {
   "name": "graphlabs.core.notifier",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
@@ -9,6 +9,8 @@
   "dependencies": {
     "axios": "^0.17.0"
   },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "devDependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
