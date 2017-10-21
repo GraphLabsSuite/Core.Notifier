@@ -1,12 +1,13 @@
 {
   "name": "graphlabs.core.notifier",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/eakarpov/GraphLabsSuite.Core.Notifier.git"
   },
   "dependencies": {
+    "axios": "^0.17.0"
   },
   "devDependencies": {
     "body-parser": "^1.18.2",
@@ -16,7 +17,6 @@
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.34",
     "chai": "^4.1.0",
-    "axios": "^0.17.0",
     "mocha": "^3.4.2",
     "ts-node": "^3.2.0",
     "typescript": "^2.5.3"
