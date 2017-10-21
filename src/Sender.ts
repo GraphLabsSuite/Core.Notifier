@@ -1,22 +1,17 @@
-import "isomorphic-fetch";
 import {IPrepared} from "./IPrepared";
 import {IResult} from "./IResult";
+import axios, {AxiosResponse} from "axios";
 
 export default class Sender {
 
   private host: string = 'http://127.0.0.1:8080';
 
   async send(messageObject: IPrepared): Promise<IResult> {
-    return fetch(`${this.host}/notificate`, {
-      method: 'POST',
-      headers:  {
-        "Content-type": "application/json; charset=UTF-8"
-      },
-      body: JSON.stringify(messageObject),
-    }).then((response: Response) => {
+    return axios.post(`${this.host}/notificate`, messageObject)
+      .then((response: AxiosResponse<any>) => {
       return {
-        status: response.ok,
-        message: response.body
+        status: response.status,
+        message: response.data.message
       } as IResult;
     });
   }

@@ -1,10 +1,11 @@
 import Preparer from "./Preparer";
 import Sender from "./Sender";
 import {IResult} from "./IResult";
+import {AxiosPromise} from "axios";
 
 export default class Notifier {
 
-  static async send(message: string, fee?: number): Promise<void> {
+  static async send(message: string, fee?: number) {
     const preparer = new Preparer();
     const sender = new Sender();
     const preparedMessage = (fee != null)

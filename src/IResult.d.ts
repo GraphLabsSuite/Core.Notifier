@@ -1,4 +1,4 @@
 export interface IResult {
-  status: boolean;
+  status: number;
   message: string;
 }
