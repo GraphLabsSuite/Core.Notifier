@@ -1,4 +1,3 @@
-import DateTimeFormat = Intl.DateTimeFormat;
 export type Action = {
   type: string,
   payload?: IStudentAction,
@@ -12,7 +11,7 @@ export interface INotifierStore {
 export interface IStudentAction {
   message: string;
   fee: number;
-  datetime: DateTimeFormat;
+  datetime: Date;
 }
 
 export interface AssociativeArray {

@@ -4,7 +4,7 @@ import * as bodyParser from "body-parser";
 
 export default class TestServer {
 
-  private app;
+  private app: express.Application;
   private port: string;
 
   constructor() {
