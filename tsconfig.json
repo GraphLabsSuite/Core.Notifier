@@ -5,7 +5,11 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "outDir": "build",
-    "declaration": true
+    "declaration": true,
+    "lib": [
+      "es2015",
+      "es2015.promise"
+    ]
   },
   "include": [
     "src/**/*"
