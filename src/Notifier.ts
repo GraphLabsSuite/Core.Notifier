@@ -11,7 +11,7 @@ export default class Notifier {
       ? preparer.prepareError(message, fee)
       : preparer.prepareMessage(message);
     sender.send(preparedMessage).then((result: IResult) => {
-      if (result.status) {
+      if (result.status === 200) {
         console.log(`Successful: ${result.message}`);
       } else {
         console.log(`Unsuccessful: ${result.message}`);

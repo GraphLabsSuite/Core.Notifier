@@ -14,7 +14,9 @@ function createReducer() {
     [ADD_ACTION]: (state: INotifierStore, action: Action) => {
       return {
         score: state.score - action.payload.fee,
-        studentActions: state.studentActions.slice(0, -1).concat(action.payload)
+        studentActions: state.studentActions.length > 4
+          ? state.studentActions.slice(0, -1).concat(action.payload)
+          : state.studentActions.concat(action.payload)
       } as INotifierStore;
     }
   };
