@@ -11,7 +11,7 @@ export interface INotifierStore {
 export interface IStudentAction {
   message: string;
   fee: number;
-  datetime: Date;
+  datetime: string;
 }
 
 export interface AssociativeArray {
