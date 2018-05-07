@@ -1,12 +1,11 @@
 import {IResult, IPrepared} from "./types";
 import axios, {AxiosResponse} from "axios";
+import {getConfig} from "./config";
 
 export default class Sender {
-
-  private host: string = 'http://127.0.0.1:8080';
-
   async send(messageObject: IPrepared): Promise<IResult> {
-    return axios.post(`${this.host}/notificate`, messageObject)
+    const config = getConfig();
+    return axios.post(`${config.protocol}://${config.host}:${config.port}/${config.path}`, messageObject)
       .then((response: AxiosResponse<any>) => {
       return {
         status: response.status,
