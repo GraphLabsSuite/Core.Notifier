@@ -4,10 +4,18 @@ import {Notifier} from "./Notifier";
 
 export const addAction = async (payload: IStudentAction): Promise<Action> => {
   payload.datetime = Date.now();
-  return Notifier.send(payload).then(() => {
-    return {
-      type: ADD_ACTION,
-      payload,
-    } as Action;
-  });
+  return Notifier.send(payload)
+    .then(() => {
+      return {
+        type: ADD_ACTION,
+        payload,
+      } as Action;
+    });
+};
+
+export const addPlainAction = (payload: IStudentAction) => {
+  return {
+    type: ADD_ACTION,
+    payload,
+  };
 };
