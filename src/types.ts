@@ -11,7 +11,10 @@ export interface INotifierStore {
 export interface IStudentAction {
   message: string;
   fee: number;
-  datetime: string;
+  taskId: number;
+  sessionGuid: string;
+  isTaskFinished: boolean;
+  datetime?: number;
 }
 
 export interface AssociativeArray {

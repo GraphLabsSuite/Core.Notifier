@@ -1,14 +1,14 @@
 import Preparer from "./Preparer";
 import Sender from "./Sender";
-import {IResult} from "./types";
+import {IResult, IStudentAction} from "./types";
 
-export default class Notifier {
+export class Notifier {
 
-  static async send(message: string, fee?: number) {
+  static async send(message: IStudentAction) {
     const preparer = new Preparer();
     const sender = new Sender();
-    const preparedMessage = (fee != null)
-      ? preparer.prepareError(message, fee)
+    const preparedMessage = message.fee
+      ? preparer.prepareError(message, message.fee)
       : preparer.prepareMessage(message);
     sender.send(preparedMessage).then((result: IResult) => {
       if (result.status === 200) {

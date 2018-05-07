@@ -1,15 +1,15 @@
-import {IPrepared} from "./types";
+import {IPrepared, IStudentAction} from "./types";
 export default class Preparer {
 
-  prepareMessage(message: string): IPrepared {
+  prepareMessage(message: IStudentAction): IPrepared {
     return {
-      message
+      ...message
     } as IPrepared;
   }
 
-  prepareError(err: string, fee: number): IPrepared {
+  prepareError(message: IStudentAction, fee: number): IPrepared {
     return {
-      err,
+      ...message,
       fee
     } as IPrepared;
   }
