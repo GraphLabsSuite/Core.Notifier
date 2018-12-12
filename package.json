@@ -6,9 +6,6 @@
     "type": "git",
     "url": "https://github.com/eakarpov/GraphLabsSuite.Core.Notifier.git"
   },
-  "dependencies": {
-    "axios": "^0.17.0"
-  },
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "devDependencies": {
