@@ -3,7 +3,9 @@ export default class Preparer {
 
   prepareMessage(message: IStudentAction): IPrepared {
     return {
-      ...message
+      Action: message.message,
+      VariantId: message.taskId,
+      StudentId: 1,
     } as IPrepared;
   }
 

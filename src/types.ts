@@ -30,7 +30,9 @@ export interface IPreparedError extends IPrepared {
 }
 
 export interface IPreparedMessage extends IPrepared{
-  message: string;
+  Action: string;
+  VariantId: number,
+  StudentId: number,
 }
 
 export interface IResult {
