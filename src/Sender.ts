@@ -8,6 +8,10 @@ export default class Sender {
         return fetch(`${config.protocol}://${config.host}:${config.port}/${config.path}`, {
             body: JSON.stringify(messageObject),
             method: 'post',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${localStorage.getItem('gl-token')}`,
+            },
         })
             .then((response: Response) => {
                 this.status = response.status;
