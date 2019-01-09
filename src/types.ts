@@ -13,6 +13,7 @@ export interface IStudentAction {
   fee: number;
   variantId: number;
   isTaskFinished: boolean;
+  datetime: number;
 }
 
 export interface AssociativeArray {
